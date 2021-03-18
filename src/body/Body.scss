@@ -1,0 +1,249 @@
+*,*:before,*:after{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    }
+
+.body__container{
+
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-sizing: border-box;
+    font-family: 'Metrophobic', sans-serif;
+    .body__left{
+        display:grid;
+        grid-template-columns: 100%;
+        background-color: #f4fafd;
+        height: 100vh;
+
+        img{
+           margin:1.4em 0 1.2em 1.2em;
+            width: 9em;
+            object-fit: contain;
+        }
+
+        .body__left__img{
+            width: 80%;
+            height: auto;
+            margin: auto;
+
+            img{
+                width: 65%;
+                padding: 5em 0em 0em 0em
+            }
+        }
+      .par__container{
+          background-color: #f4fafd;
+          width: 100%;
+          height: 9em;
+          padding-top: 4em;
+        p{
+            color: #2d9cdb;
+            width:70%;
+            margin: auto;
+            text-align: left;
+            font-size: 37px;
+            font-weight: 300;
+            letter-spacing: -0.07em;
+
+            span{
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+        }
+
+      }
+    }
+
+    .body__right{
+        .body__image{
+            display: none;
+        }
+        .register__head{
+            padding-top: 5.5em;
+            width: 100%;
+            margin: auto;
+            h2{
+                color: #2d9cdb;
+            }
+            p{
+                color:#606470;
+                font-size: 13px;
+            }
+            
+        }
+        .register__body{
+            padding-top:1em;
+
+            form{
+                .input__icon, .eye__input__icon{
+                    position: absolute;
+                    font-size: 13px;
+                    padding: 13px;
+                }
+                .eye__input__icon{
+                    margin-left: -3em;
+                }
+                input{
+                   // display: flex;
+                    font-size: 12px;
+                    padding: 10px 0px;
+                    padding-left: 35px;
+                    margin-bottom: 6px;
+                    width: 40%;
+                    height: 20px;
+                    border-radius: 6px;
+                    border: 1px solid #ddd;
+
+                    &::placeholder{
+                        color: #b7b7b7;
+                    }
+
+                    &:focus{
+                        border: 1px solid #2d9cdb;
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+
+                p{
+                    width: 40%;
+                    margin: auto;
+                    padding-right: 4em;
+                    font-size: 13px;
+                    text-align: left;
+                    line-height: 1.5;
+
+                    span{
+                        color:#2d9cdb;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                button{
+                    width: 50%;
+                    background-color: #2d9cdb;
+                    border-radius: 6px;
+                    outline: none;
+                    height: 42px;
+                    padding: 10px 0px;
+                    box-shadow: none;
+                    border: none;
+                    margin: 2em;
+                    color: white;
+                    opacity: .7;
+                    &:hover{
+                        cursor: pointer;
+                        opacity: .6;
+                    }
+                }
+                .reg__check{
+                    width: 50%;
+                    margin: auto;
+                    text-align: right;
+
+                    @media only screen and (max-width: 350px) {
+                        width: 60%;
+                        //text-align: center;
+                    }
+    
+                }
+            }
+        }
+
+        .register__bottom{
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            width: 70%;
+            margin: 1em auto;
+            background-color: #f9fafc;
+
+            img{
+                width:6em;
+            }
+            #reg_par_one{
+                font-size: 15px;
+                color: #575a65;
+                font-weight: 600;
+            }
+            #reg_par_two{
+                font-size: 10px;
+                color: #9da8b6;
+                font-weight: 600
+            }
+            .apps__icon {
+
+                img{
+                    width: 60px;
+                   // vertical-align: middle;
+                    padding: 1em 0;
+
+                    &:hover{
+                        background-color: #e8f7ff;
+                        cursor: pointer;
+                    }
+                }
+                .chatbot{
+                    position: fixed;
+                    bottom: 0;
+                    width: 60px;
+                    right: 1em;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+//media port less than 1025px
+
+@media only screen and (max-width: 1025px) {
+    .body__container{
+        display: grid;
+        grid-template-columns: 100%;
+
+        .body__left{
+            display: none;
+        }
+
+        .body__right{
+            .body__image{
+                display: block;
+                img{
+                width: 150px;
+                padding-top:5em;
+                }
+            }
+            .register__head{
+                padding-top:1px;
+            }
+            .register__bottom{
+
+                @media only screen and (max-width: 350px) {
+                    display: grid;
+                    grid-template-columns: 100%;
+                }
+
+            }
+            
+
+        }
+    }
+  } 
+  
+  .error-input{
+    border: #ff4545 1.5px solid;
+  }
+  .error-text{
+    bottom: 8px;
+    position: relative;
+    margin: 0;
+    left: 1px;
+    color: #ff0000;
+    font-family: initial;
+    font-size: 13px;
+  }

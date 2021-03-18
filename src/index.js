@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Switch, Redirect} from 'react-router-dom';
+
+import 'react-toastify/dist/ReactToastify.css';
+import history from './history';
+
+import { ToastContainer, Slide } from 'react-toastify';
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//import App from './App';
+import Body from './body/Body';
+import Dashboard from './dashboard/Dashboard';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <React.Fragment>
+        <Router history={history}>
+          <Switch>
+           {<Route exact path = '/' component={Body} /> }
+            <Route exact path = '/register' component={Body} />
+            <Route exact path = '/dashboard' component={Dashboard} />
+            <Redirect to='/register' />
+          </Switch>
+        </Router>
+        <ToastContainer position="top-right" autoClose={2000} hideProgressBar transition={Slide}/>
+      </React.Fragment>
+    )
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -43,7 +43,5 @@
     ]
   },
   "proxy": "https://dashboard.quichealth.com.ng",
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
